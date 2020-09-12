@@ -1,0 +1,14 @@
+actions:
+  1:
+    description: "Reindex  acme_production  into spike-prod4"
+    action: reindex
+    options:
+      wait_interval: 9
+      max_wait: -1
+      request_body:
+        source:
+          index: movies 
+        dest:
+          index: movies_new 
+    filters:
+    - filtertype: none
