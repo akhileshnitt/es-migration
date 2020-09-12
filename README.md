@@ -134,4 +134,36 @@ curl -H "Content-Type: application/json" -XPUT http://localhost:9200/movies_new/
  "year": 2020,
  "hero": "bh"
 }'
+```
+
+Verify new index in Elastic Head
+
+```
+dex
+_type
+_id
+▲
+_score
+title
+year
+hero
+movies_new
+movie
+109487
+1
+Interstellar
+2014
+movies_new
+movie
+234325462
+1
+bhoot
+2020
+bh
+movies_new
+movie
+12345
+1
+tumbaad
+2020
 
