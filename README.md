@@ -139,7 +139,10 @@ curl -H "Content-Type: application/json" -XPUT http://localhost:9200/movies_new/
 Verify new index in Elastic Head
 
 ```
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+_index | _index | _id | _score | _title | _year | _hero 
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+movies_new|movie|109487| |Interstellar|2014| |
+movies_new|movie|234325462| |Tumbaad|2019| |
+movies_new|movie|12345| |Bhoot|2020|bh |
+
 ```
