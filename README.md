@@ -120,3 +120,18 @@ check mapping
     }
   }
 }
+```
+Now run curator to migrate from movies to moview_new
+```
+./migration-script_movie.sh
+```
+
+Insert Data into new schema
+```
+curl -H "Content-Type: application/json" -XPUT http://localhost:9200/movies_new/movie/234325462 -d '{
+"genre": ["Horro"],
+"title": "bhoot",
+ "year": 2020,
+ "hero": "bh"
+}'
+
