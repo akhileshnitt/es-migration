@@ -14,7 +14,41 @@ curl -H "Content-Type: application/json" -XPUT http://localhost:9200/movies -d '
 	}
 }'
 ```
-
+check mapping 
+```
+http://localhost:9200/movies/_mapping?pretty
+{
+  "movies" : {
+    "mappings" : {
+      "movie" : {
+        "properties" : {
+          "genre" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "title" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "year" : {
+            "type" : "date"
+          }
+        }
+      }
+    }
+  }
+}
+```
 add movie data
 
 ```curl -H "Content-Type: application/json" -XPUT http://localhost:9200/movies/movie/109487 -d '
